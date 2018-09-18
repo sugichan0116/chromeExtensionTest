@@ -19,8 +19,11 @@ $(function(){
 
       function isMatchWith(text, keys) {
         let isMatch = false;
+        let extend = text.match(/.*\/(([^\/]+)\.(\w+))\??[^\/]*$/)[3];
+        console.log(extend);
         keys.forEach(key => {
-          if(text.endsWith(key)) isMatch = true;
+          //if(text.endsWith(key)) isMatch = true;
+          if(extend === key) isMatch = true;
         });
         return isMatch;
       }
@@ -47,8 +50,9 @@ $(function(){
                 )
                 .addClass("my_popup_source")
               ;
-              $(this).css("background-color", "orange");
             }
+
+            $(this).addClass("my_highlight");
             console.log(href);
           }
         )
@@ -56,7 +60,7 @@ $(function(){
           "mouseleave",
           target,
           function() {
-            $(this).css("background-color", "transparent");
+            $(this).removeClass("my_highlight");
           }
         )
       ;
