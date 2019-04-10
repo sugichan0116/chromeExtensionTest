@@ -1,6 +1,6 @@
 {
 	"manifest_version": 2,
-	"name": "Link popup",
+	"name": "Imagepopup Viewer",
 	"version": "1.0.2",
 	"description": "a extention for Google Chrome",
 	"icons": {
@@ -22,7 +22,7 @@
 	  {
 	    "matches": ["*://*/*"],
 			"css": ["mycss.css"],
-	    "js": ["jquery-3.1.1.min.js", "myscript.js"]
+	    "js": ["jquery-3.1.1.min.js", "myscript.js", "gh_viewer.js"]
 	  }
 	],
 	"background": {

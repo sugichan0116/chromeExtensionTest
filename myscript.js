@@ -53,7 +53,7 @@ $(function(){
             }
 
             $(this).addClass("my_highlight");
-            console.log(href);
+            //console.log(href);
           }
         )
         .on(
